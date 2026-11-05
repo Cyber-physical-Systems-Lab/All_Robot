@@ -1,0 +1,14 @@
+# MuJoCo 3.x: viewer, MJCF generation (DAE -> OBJ) and validation.
+#   conda env create -f envs/env_mujoco.yml   (or: bash envs/setup.sh mujoco)
+#   conda activate env_mujoco
+name: env_mujoco
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pyyaml
+  - pip
+  - pip:
+      - mujoco>=3.2,<4
+      - pycollada>=0.8

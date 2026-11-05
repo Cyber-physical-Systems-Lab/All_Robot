@@ -1,0 +1,22 @@
+# Isaac Sim 4.5 + Isaac Lab 2.1 (pip install). Follows the official guide:
+# https://isaac-sim.github.io/IsaacLab/v2.1.0/source/setup/installation/pip_installation.html
+#
+# Do not use this file directly; run  bash envs/setup.sh isaaclab
+# (setup.sh also clones Isaac Lab v2.1.0 and runs ./isaaclab.sh --install).
+#
+# Requirements: Ubuntu 22.04 (GLIBC >= 2.34), NVIDIA driver >= 535, RTX GPU.
+# RTX 50xx: after setup, run
+#   pip install --upgrade --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu128
+name: env_isaaclab
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pyyaml
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu121
+      - --extra-index-url https://pypi.nvidia.com
+      - torch==2.5.1
+      - torchvision==0.20.1
+      - isaacsim[all,extscache]==4.5.0

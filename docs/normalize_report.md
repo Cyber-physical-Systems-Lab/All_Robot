@@ -1,0 +1,482 @@
+# URDF normalisation report
+
+## go2 — `robots/go2/urdf/go2.urdf` (25 changes)
+
+- mesh package://robot_description/meshes/go2/base.dae -> package://cps_robot_description/robots/go2/meshes/base.dae
+- mesh package://robot_description/meshes/go2/hip.dae -> package://cps_robot_description/robots/go2/meshes/hip.dae
+- mesh package://robot_description/meshes/go2/thigh.dae -> package://cps_robot_description/robots/go2/meshes/thigh.dae
+- mesh package://robot_description/meshes/go2/calf.dae -> package://cps_robot_description/robots/go2/meshes/calf.dae
+- mesh package://robot_description/meshes/go2/foot.dae -> package://cps_robot_description/robots/go2/meshes/foot.dae
+- mesh package://robot_description/meshes/go2/hip.dae -> package://cps_robot_description/robots/go2/meshes/hip.dae
+- mesh package://robot_description/meshes/go2/thigh_mirror.dae -> package://cps_robot_description/robots/go2/meshes/thigh_mirror.dae
+- mesh package://robot_description/meshes/go2/calf_mirror.dae -> package://cps_robot_description/robots/go2/meshes/calf_mirror.dae
+- mesh package://robot_description/meshes/go2/foot.dae -> package://cps_robot_description/robots/go2/meshes/foot.dae
+- mesh package://robot_description/meshes/go2/hip.dae -> package://cps_robot_description/robots/go2/meshes/hip.dae
+- mesh package://robot_description/meshes/go2/thigh.dae -> package://cps_robot_description/robots/go2/meshes/thigh.dae
+- mesh package://robot_description/meshes/go2/calf.dae -> package://cps_robot_description/robots/go2/meshes/calf.dae
+- mesh package://robot_description/meshes/go2/foot.dae -> package://cps_robot_description/robots/go2/meshes/foot.dae
+- mesh package://robot_description/meshes/go2/hip.dae -> package://cps_robot_description/robots/go2/meshes/hip.dae
+- mesh package://robot_description/meshes/go2/thigh_mirror.dae -> package://cps_robot_description/robots/go2/meshes/thigh_mirror.dae
+- mesh package://robot_description/meshes/go2/calf_mirror.dae -> package://cps_robot_description/robots/go2/meshes/calf_mirror.dae
+- mesh package://robot_description/meshes/go2/foot.dae -> package://cps_robot_description/robots/go2/meshes/foot.dae
+- link FL_calflower: placeholder inertial mass=0.1 kg
+- link FL_calflower1: placeholder inertial mass=0.1 kg
+- link FR_calflower: placeholder inertial mass=0.1 kg
+- link FR_calflower1: placeholder inertial mass=0.1 kg
+- link RL_calflower: placeholder inertial mass=0.1 kg
+- link RL_calflower1: placeholder inertial mass=0.1 kg
+- link RR_calflower: placeholder inertial mass=0.1 kg
+- link RR_calflower1: placeholder inertial mass=0.1 kg
+
+## myagv — `robots/myagv/urdf/myagv.urdf` (6 changes)
+
+- mesh package://robot_description/meshes/myagv/myagv_base.dae -> package://cps_robot_description/robots/myagv/meshes/myagv_base.dae
+- mesh package://robot_description/meshes/myagv/myagv_up.dae -> package://cps_robot_description/robots/myagv/meshes/myagv_up.dae
+- link base_footprint: collision copied from visual
+- link base_footprint: placeholder inertial mass=1.8 kg
+- link base_link: collision copied from visual
+- link base_link: placeholder inertial mass=1.8 kg
+
+## mycobot_280_pi — `robots/mycobot_280_pi/urdf/mycobot_280_pi_with_camera_flange_pump.urdf` (40 changes)
+
+- mesh package://robot_description/meshes/mycobot_280_pi/G_base.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/G_base.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/G_base.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/G_base.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/pump_box.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/pump_box.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/pump_box.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/pump_box.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint1_pi.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint1_pi.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint1_pi.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint1_pi.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint2.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint2.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint3.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint3.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint4.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint4.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint4.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint4.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint5.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint5.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint5.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint5.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint6.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint6.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint6.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint6.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint7.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint7.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint7.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint7.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/camera_flange.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/camera_flange.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/camera_flange.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/camera_flange.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/pump_head.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/pump_head.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/pump_head.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/pump_head.dae
+- removed xacro element <property>
+- link g_base: placeholder inertial mass=0.1 kg
+- link pump_box: placeholder inertial mass=0.1 kg
+- link joint1: placeholder inertial mass=0.1 kg
+- link joint2: placeholder inertial mass=0.1 kg
+- link joint3: placeholder inertial mass=0.1 kg
+- link joint4: placeholder inertial mass=0.1 kg
+- link joint5: placeholder inertial mass=0.1 kg
+- link joint6: placeholder inertial mass=0.1 kg
+- link joint6_flange: placeholder inertial mass=0.1 kg
+- link camera_flange: placeholder inertial mass=0.1 kg
+- link pump_head: placeholder inertial mass=0.1 kg
+- joint joint2_to_joint1: velocity 2 (was 0)
+- joint joint3_to_joint2: velocity 2 (was 0)
+- joint joint4_to_joint3: velocity 2 (was 0)
+- joint joint5_to_joint4: velocity 2 (was 0)
+- joint joint6_to_joint5: velocity 2 (was 0)
+- joint joint6output_to_joint6: velocity 2 (was 0)
+
+## mycobot_280_pi — `robots/mycobot_280_pi/urdf/mycobot_280_pi.urdf` (31 changes)
+
+- mesh package://mycobot_description/urdf/mycobot_280_pi/G_base.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/G_base.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/G_base.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/G_base.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint1_pi.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint1_pi.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint1_pi.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint1_pi.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint2.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint2.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint3.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint3.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint4.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint4.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint4.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint4.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint5.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint5.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint5.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint5.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint6.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint6.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint6.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint6.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint7.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint7.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint7.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint7.dae
+- removed xacro element <property>
+- link g_base: placeholder inertial mass=0.1 kg
+- link joint1: placeholder inertial mass=0.1 kg
+- link joint2: placeholder inertial mass=0.1 kg
+- link joint3: placeholder inertial mass=0.1 kg
+- link joint4: placeholder inertial mass=0.1 kg
+- link joint5: placeholder inertial mass=0.1 kg
+- link joint6: placeholder inertial mass=0.1 kg
+- link joint6_flange: placeholder inertial mass=0.1 kg
+- joint joint2_to_joint1: velocity 2 (was 0)
+- joint joint3_to_joint2: velocity 2 (was 0)
+- joint joint4_to_joint3: velocity 2 (was 0)
+- joint joint5_to_joint4: velocity 2 (was 0)
+- joint joint6_to_joint5: velocity 2 (was 0)
+- joint joint6output_to_joint6: velocity 2 (was 0)
+
+## mycobot_280_pi — `robots/mycobot_280_pi/urdf/mycobot_280_pi_with_camera_flange.urdf` (34 changes)
+
+- mesh package://mycobot_description/urdf/mycobot_280_pi/G_base.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/G_base.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/G_base.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/G_base.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint1_pi.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint1_pi.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint1_pi.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint1_pi.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint2.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint2.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint3.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint3.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint4.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint4.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint4.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint4.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint5.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint5.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint5.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint5.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint6.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint6.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint6.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint6.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint7.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint7.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint7.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint7.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/camera_flange.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/camera_flange.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/camera_flange.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/camera_flange.dae
+- removed xacro element <property>
+- link g_base: placeholder inertial mass=0.1 kg
+- link joint1: placeholder inertial mass=0.1 kg
+- link joint2: placeholder inertial mass=0.1 kg
+- link joint3: placeholder inertial mass=0.1 kg
+- link joint4: placeholder inertial mass=0.1 kg
+- link joint5: placeholder inertial mass=0.1 kg
+- link joint6: placeholder inertial mass=0.1 kg
+- link joint6_flange: placeholder inertial mass=0.1 kg
+- link camera_flange: placeholder inertial mass=0.1 kg
+- joint joint2_to_joint1: velocity 2 (was 0)
+- joint joint3_to_joint2: velocity 2 (was 0)
+- joint joint4_to_joint3: velocity 2 (was 0)
+- joint joint5_to_joint4: velocity 2 (was 0)
+- joint joint6_to_joint5: velocity 2 (was 0)
+- joint joint6output_to_joint6: velocity 2 (was 0)
+
+## mycobot_280_pi — `robots/mycobot_280_pi/urdf/mycobot_280_pi_with_pump.urdf` (37 changes)
+
+- mesh package://mycobot_description/urdf/mycobot_280_pi/G_base.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/G_base.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/G_base.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/G_base.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/pump_box.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/pump_box.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/pump_box.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/pump_box.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint1_pi.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint1_pi.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint1_pi.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint1_pi.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint2.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint2.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint3.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint3.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint4.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint4.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint4.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint4.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint5.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint5.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint5.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint5.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint6.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint6.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint6.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint6.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint7.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint7.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/joint7.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint7.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/pump_head.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/pump_head.dae
+- mesh package://mycobot_description/urdf/mycobot_280_pi/pump_head.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/pump_head.dae
+- removed xacro element <property>
+- link g_base: placeholder inertial mass=0.1 kg
+- link pump_box: placeholder inertial mass=0.1 kg
+- link joint1: placeholder inertial mass=0.1 kg
+- link joint2: placeholder inertial mass=0.1 kg
+- link joint3: placeholder inertial mass=0.1 kg
+- link joint4: placeholder inertial mass=0.1 kg
+- link joint5: placeholder inertial mass=0.1 kg
+- link joint6: placeholder inertial mass=0.1 kg
+- link joint6_flange: placeholder inertial mass=0.1 kg
+- link pump_head: placeholder inertial mass=0.1 kg
+- joint joint2_to_joint1: velocity 2 (was 0)
+- joint joint3_to_joint2: velocity 2 (was 0)
+- joint joint4_to_joint3: velocity 2 (was 0)
+- joint joint5_to_joint4: velocity 2 (was 0)
+- joint joint6_to_joint5: velocity 2 (was 0)
+- joint joint6output_to_joint6: velocity 2 (was 0)
+
+## mycobot_280_gripper — `robots/mycobot_280_gripper/urdf/mycobot_280_gripper.urdf` (58 changes)
+
+- mesh package://mycobot_description/urdf/mycobot/G_base.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/G_base.dae
+- mesh package://mycobot_description/urdf/mycobot/G_base.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/G_base.dae
+- mesh package://mycobot_description/urdf/mycobot/joint1.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/joint1.dae
+- mesh package://mycobot_description/urdf/mycobot/joint1.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/joint1.dae
+- mesh package://mycobot_description/urdf/mycobot/joint2.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/joint2.dae
+- mesh package://mycobot_description/urdf/mycobot/joint2.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/joint2.dae
+- mesh package://mycobot_description/urdf/mycobot/joint3.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/joint3.dae
+- mesh package://mycobot_description/urdf/mycobot/joint3.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/joint3.dae
+- mesh package://mycobot_description/urdf/mycobot/joint4.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/joint4.dae
+- mesh package://mycobot_description/urdf/mycobot/joint4.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/joint4.dae
+- mesh package://mycobot_description/urdf/mycobot/joint5.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/joint5.dae
+- mesh package://mycobot_description/urdf/mycobot/joint5.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/joint5.dae
+- mesh package://mycobot_description/urdf/mycobot/joint6.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/joint6.dae
+- mesh package://mycobot_description/urdf/mycobot/joint6.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/joint6.dae
+- mesh package://mycobot_description/urdf/mycobot/joint7.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/joint7.dae
+- mesh package://mycobot_description/urdf/mycobot/joint7.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/joint7.dae
+- mesh package://mycobot_description/urdf/mycobot/gripper_base.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/gripper_base.dae
+- mesh package://mycobot_description/urdf/mycobot/gripper_base.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/gripper_base.dae
+- mesh package://mycobot_description/urdf/mycobot/gripper_left1.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/gripper_left1.dae
+- mesh package://mycobot_description/urdf/mycobot/gripper_left1.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/gripper_left1.dae
+- mesh package://mycobot_description/urdf/mycobot/gripper_left2.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/gripper_left2.dae
+- mesh package://mycobot_description/urdf/mycobot/gripper_left2.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/gripper_left2.dae
+- mesh package://mycobot_description/urdf/mycobot/gripper_left3.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/gripper_left3.dae
+- mesh package://mycobot_description/urdf/mycobot/gripper_left3.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/gripper_left3.dae
+- mesh package://mycobot_description/urdf/mycobot/gripper_right1.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/gripper_right1.dae
+- mesh package://mycobot_description/urdf/mycobot/gripper_right1.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/gripper_right1.dae
+- mesh package://mycobot_description/urdf/mycobot/gripper_right2.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/gripper_right2.dae
+- mesh package://mycobot_description/urdf/mycobot/gripper_right2.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/gripper_right2.dae
+- mesh package://mycobot_description/urdf/mycobot/gripper_right3.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/gripper_right3.dae
+- mesh package://mycobot_description/urdf/mycobot/gripper_right3.dae -> package://cps_robot_description/robots/mycobot_280_gripper/meshes/gripper_right3.dae
+- removed xacro element <property>
+- link g_base: placeholder inertial mass=0.1 kg
+- link joint1: placeholder inertial mass=0.1 kg
+- link joint2: placeholder inertial mass=0.1 kg
+- link joint3: placeholder inertial mass=0.1 kg
+- link joint4: placeholder inertial mass=0.1 kg
+- link joint5: placeholder inertial mass=0.1 kg
+- link joint6: placeholder inertial mass=0.1 kg
+- link joint6_flange: placeholder inertial mass=0.1 kg
+- link gripper_base: placeholder inertial mass=0.1 kg
+- link gripper_left1: placeholder inertial mass=0.1 kg
+- link gripper_left2: placeholder inertial mass=0.1 kg
+- link gripper_left3: placeholder inertial mass=0.1 kg
+- link gripper_right1: placeholder inertial mass=0.1 kg
+- link gripper_right2: placeholder inertial mass=0.1 kg
+- link gripper_right3: placeholder inertial mass=0.1 kg
+- joint joint2_to_joint1: velocity 2 (was 0)
+- joint joint3_to_joint2: velocity 2 (was 0)
+- joint joint4_to_joint3: velocity 2 (was 0)
+- joint joint5_to_joint4: velocity 2 (was 0)
+- joint joint6_to_joint5: velocity 2 (was 0)
+- joint joint6output_to_joint6: velocity 2 (was 0)
+- joint gripper_controller: velocity 2 (was 0)
+- joint gripper_base_to_gripper_left2: velocity 2 (was 0)
+- joint gripper_left3_to_gripper_left1: velocity 2 (was 0)
+- joint gripper_base_to_gripper_right3: velocity 2 (was 0)
+- joint gripper_base_to_gripper_right2: velocity 2 (was 0)
+- joint gripper_right3_to_gripper_right1: velocity 2 (was 0)
+
+## mycomb — `robots/mycomb/urdf/mycomb.urdf` (63 changes)
+
+- mesh package://robot_description/meshes/myagv/myagv_base.dae -> package://cps_robot_description/robots/myagv/meshes/myagv_base.dae
+- mesh package://robot_description/meshes/myagv/myagv_up.dae -> package://cps_robot_description/robots/myagv/meshes/myagv_up.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/G_base.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/G_base.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/G_base.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/G_base.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint1_pi.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint1_pi.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint1_pi.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint1_pi.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint2.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint2.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint3.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint3.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint4.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint4.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint4.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint4.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint5.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint5.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint5.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint5.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint6.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint6.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint6.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint6.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint7.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint7.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint7.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint7.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_base.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_base.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_base.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_base.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_left1.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_left1.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_left1.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_left1.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_left2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_left2.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_left2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_left2.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_left3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_left3.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_left3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_left3.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_right1.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_right1.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_right1.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_right1.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_right2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_right2.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_right2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_right2.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_right3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_right3.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_right3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_right3.dae
+- link base_footprint: collision copied from visual
+- link base_footprint: placeholder inertial mass=0.1 kg
+- link base_up: collision copied from visual
+- link base_up: placeholder inertial mass=0.1 kg
+- link g_base: placeholder inertial mass=0.1 kg
+- link joint1: placeholder inertial mass=0.1 kg
+- link joint2: placeholder inertial mass=0.1 kg
+- link joint3: placeholder inertial mass=0.1 kg
+- link joint4: placeholder inertial mass=0.1 kg
+- link joint5: placeholder inertial mass=0.1 kg
+- link joint6: placeholder inertial mass=0.1 kg
+- link joint6_flange: placeholder inertial mass=0.1 kg
+- link gripper_base: placeholder inertial mass=0.1 kg
+- link gripper_left1: placeholder inertial mass=0.1 kg
+- link gripper_left2: placeholder inertial mass=0.1 kg
+- link gripper_left3: placeholder inertial mass=0.1 kg
+- link gripper_right1: placeholder inertial mass=0.1 kg
+- link gripper_right2: placeholder inertial mass=0.1 kg
+- link gripper_right3: placeholder inertial mass=0.1 kg
+- joint joint2_to_joint1: velocity 2 (was 0)
+- joint joint3_to_joint2: velocity 2 (was 0)
+- joint joint4_to_joint3: velocity 2 (was 0)
+- joint joint5_to_joint4: velocity 2 (was 0)
+- joint joint6_to_joint5: velocity 2 (was 0)
+- joint joint6output_to_joint6: velocity 2 (was 0)
+- joint gripper_controller: velocity 2 (was 0)
+- joint gripper_base_to_gripper_left2: velocity 2 (was 0)
+- joint gripper_left3_to_gripper_left1: velocity 2 (was 0)
+- joint gripper_base_to_gripper_right3: velocity 2 (was 0)
+- joint gripper_base_to_gripper_right2: velocity 2 (was 0)
+- joint gripper_right3_to_gripper_right1: velocity 2 (was 0)
+
+## mycomb — `robots/mycomb/urdf/mycomb1.urdf` (63 changes)
+
+- mesh package://robot_description/meshes/myagv/myagv_base.dae -> package://cps_robot_description/robots/myagv/meshes/myagv_base.dae
+- mesh package://robot_description/meshes/myagv/myagv_up.dae -> package://cps_robot_description/robots/myagv/meshes/myagv_up.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/G_base.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/G_base.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/G_base.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/G_base.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint1_pi.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint1_pi.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint1_pi.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint1_pi.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint2.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint2.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint3.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint3.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint4.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint4.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint4.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint4.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint5.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint5.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint5.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint5.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint6.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint6.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint6.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint6.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint7.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint7.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/joint7.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/joint7.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_base.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_base.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_base.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_base.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_left1.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_left1.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_left1.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_left1.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_left2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_left2.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_left2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_left2.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_left3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_left3.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_left3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_left3.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_right1.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_right1.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_right1.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_right1.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_right2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_right2.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_right2.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_right2.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_right3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_right3.dae
+- mesh package://robot_description/meshes/mycobot_280_pi/gripper_right3.dae -> package://cps_robot_description/robots/mycobot_280_pi/meshes/gripper_right3.dae
+- link base_footprint_copy: collision copied from visual
+- link base_footprint_copy: placeholder inertial mass=0.1 kg
+- link base_up_copy: collision copied from visual
+- link base_up_copy: placeholder inertial mass=0.1 kg
+- link g_base_copy: placeholder inertial mass=0.1 kg
+- link joint1_copy: placeholder inertial mass=0.1 kg
+- link joint2_copy: placeholder inertial mass=0.1 kg
+- link joint3_copy: placeholder inertial mass=0.1 kg
+- link joint4_copy: placeholder inertial mass=0.1 kg
+- link joint5_copy: placeholder inertial mass=0.1 kg
+- link joint6_copy: placeholder inertial mass=0.1 kg
+- link joint6_flange_copy: placeholder inertial mass=0.1 kg
+- link gripper_base_copy: placeholder inertial mass=0.1 kg
+- link gripper_left1_copy: placeholder inertial mass=0.1 kg
+- link gripper_left2_copy: placeholder inertial mass=0.1 kg
+- link gripper_left3_copy: placeholder inertial mass=0.1 kg
+- link gripper_right1_copy: placeholder inertial mass=0.1 kg
+- link gripper_right2_copy: placeholder inertial mass=0.1 kg
+- link gripper_right3_copy: placeholder inertial mass=0.1 kg
+- joint joint2_to_joint1_copy: velocity 2 (was 0)
+- joint joint3_to_joint2_copy: velocity 2 (was 0)
+- joint joint4_to_joint3_copy: velocity 2 (was 0)
+- joint joint5_to_joint4_copy: velocity 2 (was 0)
+- joint joint6_to_joint5_copy: velocity 2 (was 0)
+- joint joint6output_to_joint6_copy: velocity 2 (was 0)
+- joint gripper_controller: velocity 2 (was 0)
+- joint gripper_base_to_gripper_left2_copy: velocity 2 (was 0)
+- joint gripper_left3_to_gripper_left1_copy: velocity 2 (was 0)
+- joint gripper_base_to_gripper_right3_copy: velocity 2 (was 0)
+- joint gripper_base_to_gripper_right2_copy: velocity 2 (was 0)
+- joint gripper_right3_to_gripper_right1_copy: velocity 2 (was 0)
+
+## nova5 — `robots/nova5/urdf/nova5.urdf` (26 changes)
+
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/nova5/base_link.STL -> package://cps_robot_description/robots/nova5/meshes/base_link.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/nova5/base_link.STL -> package://cps_robot_description/robots/nova5/meshes/base_link.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/nova5/Link1.STL -> package://cps_robot_description/robots/nova5/meshes/Link1.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/nova5/Link1.STL -> package://cps_robot_description/robots/nova5/meshes/Link1.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/nova5/Link2.STL -> package://cps_robot_description/robots/nova5/meshes/Link2.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/nova5/Link2.STL -> package://cps_robot_description/robots/nova5/meshes/Link2.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/nova5/Link3.STL -> package://cps_robot_description/robots/nova5/meshes/Link3.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/nova5/Link3.STL -> package://cps_robot_description/robots/nova5/meshes/Link3.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/nova5/Link4.STL -> package://cps_robot_description/robots/nova5/meshes/Link4.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/nova5/Link4.STL -> package://cps_robot_description/robots/nova5/meshes/Link4.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/nova5/Link5.STL -> package://cps_robot_description/robots/nova5/meshes/Link5.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/nova5/Link5.STL -> package://cps_robot_description/robots/nova5/meshes/Link5.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/nova5/Link6.STL -> package://cps_robot_description/robots/nova5/meshes/Link6.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/nova5/Link6.STL -> package://cps_robot_description/robots/nova5/meshes/Link6.STL
+- joint joint1: effort 150 (was 0)
+- joint joint1: velocity 3.14 (was 0)
+- joint joint2: effort 150 (was 0)
+- joint joint2: velocity 3.14 (was 0)
+- joint joint3: effort 150 (was 0)
+- joint joint3: velocity 3.14 (was 0)
+- joint joint4: effort 150 (was 0)
+- joint joint4: velocity 3.14 (was 0)
+- joint joint5: effort 150 (was 0)
+- joint joint5: velocity 3.14 (was 0)
+- joint joint6: effort 150 (was 0)
+- joint joint6: velocity 3.14 (was 0)
+
+## nova5_2f85 — `robots/nova5_2f85/urdf/nova5_2f85.urdf` (44 changes)
+
+- mesh package://robot_description/meshes/nova5/base_link.STL -> package://cps_robot_description/robots/nova5/meshes/base_link.STL
+- mesh package://robot_description/meshes/nova5/base_link.STL -> package://cps_robot_description/robots/nova5/meshes/base_link.STL
+- mesh package://robot_description/meshes/nova5/Link1.STL -> package://cps_robot_description/robots/nova5/meshes/Link1.STL
+- mesh package://robot_description/meshes/nova5/Link1.STL -> package://cps_robot_description/robots/nova5/meshes/Link1.STL
+- mesh package://robot_description/meshes/nova5/Link2.STL -> package://cps_robot_description/robots/nova5/meshes/Link2.STL
+- mesh package://robot_description/meshes/nova5/Link2.STL -> package://cps_robot_description/robots/nova5/meshes/Link2.STL
+- mesh package://robot_description/meshes/nova5/Link3.STL -> package://cps_robot_description/robots/nova5/meshes/Link3.STL
+- mesh package://robot_description/meshes/nova5/Link3.STL -> package://cps_robot_description/robots/nova5/meshes/Link3.STL
+- mesh package://robot_description/meshes/nova5/Link4.STL -> package://cps_robot_description/robots/nova5/meshes/Link4.STL
+- mesh package://robot_description/meshes/nova5/Link4.STL -> package://cps_robot_description/robots/nova5/meshes/Link4.STL
+- mesh package://robot_description/meshes/nova5/Link5.STL -> package://cps_robot_description/robots/nova5/meshes/Link5.STL
+- mesh package://robot_description/meshes/nova5/Link5.STL -> package://cps_robot_description/robots/nova5/meshes/Link5.STL
+- mesh package://robot_description/meshes/nova5/Link6.STL -> package://cps_robot_description/robots/nova5/meshes/Link6.STL
+- mesh package://robot_description/meshes/nova5/Link6.STL -> package://cps_robot_description/robots/nova5/meshes/Link6.STL
+- mesh package://robot_description/meshes/robotiq_2f85/robotiq_85_base_link_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/robotiq_85_base_link_fine.STL
+- mesh package://robot_description/meshes/robotiq_2f85/robotiq_85_base_link_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/robotiq_85_base_link_coarse.STL
+- mesh package://robot_description/meshes/robotiq_2f85/outer_knuckle_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/outer_knuckle_fine.STL
+- mesh package://robot_description/meshes/robotiq_2f85/outer_knuckle_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/outer_knuckle_coarse.STL
+- mesh package://robot_description/meshes/robotiq_2f85/outer_finger_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/outer_finger_fine.STL
+- mesh package://robot_description/meshes/robotiq_2f85/outer_finger_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/outer_finger_coarse.STL
+- mesh package://robot_description/meshes/robotiq_2f85/inner_knuckle_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/inner_knuckle_fine.STL
+- mesh package://robot_description/meshes/robotiq_2f85/inner_knuckle_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/inner_knuckle_coarse.STL
+- mesh package://robot_description/meshes/robotiq_2f85/inner_finger_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/inner_finger_fine.STL
+- mesh package://robot_description/meshes/robotiq_2f85/inner_finger_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/inner_finger_coarse.STL
+- mesh package://robot_description/meshes/robotiq_2f85/inner_knuckle_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/inner_knuckle_fine.STL
+- mesh package://robot_description/meshes/robotiq_2f85/inner_knuckle_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/inner_knuckle_coarse.STL
+- mesh package://robot_description/meshes/robotiq_2f85/inner_finger_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/inner_finger_fine.STL
+- mesh package://robot_description/meshes/robotiq_2f85/inner_finger_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/inner_finger_coarse.STL
+- mesh package://robot_description/meshes/robotiq_2f85/outer_knuckle_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/outer_knuckle_fine.STL
+- mesh package://robot_description/meshes/robotiq_2f85/outer_knuckle_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/outer_knuckle_coarse.STL
+- mesh package://robot_description/meshes/robotiq_2f85/outer_finger_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/outer_finger_fine.STL
+- mesh package://robot_description/meshes/robotiq_2f85/outer_finger_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/outer_finger_coarse.STL
+- joint joint1: effort 150 (was 0)
+- joint joint1: velocity 3.14 (was 0)
+- joint joint2: effort 150 (was 0)
+- joint joint2: velocity 3.14 (was 0)
+- joint joint3: effort 150 (was 0)
+- joint joint3: velocity 3.14 (was 0)
+- joint joint4: effort 150 (was 0)
+- joint joint4: velocity 3.14 (was 0)
+- joint joint5: effort 150 (was 0)
+- joint joint5: velocity 3.14 (was 0)
+- joint joint6: effort 150 (was 0)
+- joint joint6: velocity 3.14 (was 0)
+
+## robotiq_2f85 — `robots/robotiq_2f85/urdf/robotiq_2f85.urdf` (18 changes)
+
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/robotiq_85_base_link_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/robotiq_85_base_link_fine.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/robotiq_85_base_link_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/robotiq_85_base_link_coarse.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/outer_knuckle_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/outer_knuckle_fine.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/outer_knuckle_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/outer_knuckle_coarse.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/outer_finger_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/outer_finger_fine.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/outer_finger_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/outer_finger_coarse.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/inner_knuckle_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/inner_knuckle_fine.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/inner_knuckle_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/inner_knuckle_coarse.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/inner_finger_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/inner_finger_fine.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/inner_finger_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/inner_finger_coarse.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/inner_knuckle_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/inner_knuckle_fine.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/inner_knuckle_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/inner_knuckle_coarse.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/inner_finger_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/inner_finger_fine.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/inner_finger_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/inner_finger_coarse.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/outer_knuckle_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/outer_knuckle_fine.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/outer_knuckle_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/outer_knuckle_coarse.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/outer_finger_fine.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/outer_finger_fine.STL
+- mesh /home/xuezhi/Robots_IsaacSim/robot_descriptions/meshes/robotiq_2f85/outer_finger_coarse.STL -> package://cps_robot_description/robots/robotiq_2f85/meshes/outer_finger_coarse.STL

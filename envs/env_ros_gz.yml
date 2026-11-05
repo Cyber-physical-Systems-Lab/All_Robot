@@ -1,0 +1,23 @@
+# ROS 2 Humble + Gazebo Fortress (ros_gz) + RViz2 from RoboStack. No system ROS install needed.
+#   bash envs/setup.sh ros_gz        (creates the env and colcon-builds this package)
+#   conda activate env_ros_gz
+# Docs: https://robostack.github.io/GettingStarted.html
+# Do not mix with a system /opt/ros installation in the same shell.
+name: env_ros_gz
+channels:
+  - robostack-staging
+  - conda-forge
+dependencies:
+  - ros-humble-desktop
+  - ros-humble-ros-gz
+  - ros-humble-xacro
+  - ros-humble-joint-state-publisher-gui
+  - ros-humble-robot-state-publisher
+  - compilers
+  - cmake
+  - pkg-config
+  - make
+  - ninja
+  - colcon-common-extensions
+  - rosdep
+  - pyyaml
