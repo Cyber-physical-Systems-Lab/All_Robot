@@ -99,18 +99,8 @@ robots:
     camera: {distance: 1.9, target_z: 0.55}   # screenshot framing
     urdf: robots/nova5_2f85/urdf/nova5_2f85.urdf
     fixed_base: true
-    mesh_search: [nova5, robotiq_2f85]
+    mesh_search: [nova5, robotiq_2f85]   # gripper meshes live in robots/robotiq_2f85/meshes (no standalone entry)
     defaults: {effort: 150.0, velocity: 3.14, link_mass: 0.1}
     usd: robots/nova5_2f85/usd/nova5_2f85.usd
     legacy_usd: robots/nova5_2f85/usd/legacy/nova5_robot_2f85.usd
     source: Dobot + ros-industrial/robotiq, composed by Xuezhi Niu
-
-  robotiq_2f85:
-    description: Robotiq 2F-85 gripper (standalone)
-    camera: {distance: 0.45, target_z: 0.08}   # screenshot framing
-    urdf: robots/robotiq_2f85/urdf/robotiq_2f85.urdf
-    fixed_base: true
-    mesh_search: [robotiq_2f85]
-    defaults: {effort: 1000.0, velocity: 2.0, link_mass: 0.05}
-    usd: robots/robotiq_2f85/usd/robotiq_2f85.usd
-    source: https://github.com/ros-industrial/robotiq

@@ -21,7 +21,6 @@ Each simulator can run from its own **conda environment** or its own **Docker im
 | `mycomb` | myAGV + myCobot 280 Pi + gripper (`mycomb1` = second instance) | ✅ | 🟢 | 🟢 | 🟢 |
 | `nova5` | Dobot Nova 5 | 🟢 | 🟢 | 🟢 | 🟢 |
 | `nova5_2f85` | Dobot Nova 5 + Robotiq 2F-85 | ✅ | 🟢 | 🟢 | 🟢 |
-| `robotiq_2f85` | Robotiq 2F-85 gripper | 🟢 | 🟢 | 🟢 | 🟢 |
 
 ✅ verified by a lab member · 🟢 loads, holds its pose and renders correctly in an automated run (see the gallery; captured 2026-11-05 with RViz2 Humble, Gazebo Fortress 6.18, MuJoCo 3.x, Isaac Sim 6.0) · 🟡 loads, but uses legacy assets · ⬜ not yet verified · ❌ known broken
 
@@ -55,9 +54,8 @@ Every robot is shown in every simulator from the same camera angle (from the +x+
 | `mycomb` | <a href="docs/screenshots/rviz/mycomb.png"><img src="docs/screenshots/rviz/mycomb.png" width="180" alt="mycomb in RViz2"/></a> | <a href="docs/screenshots/gazebo/mycomb.png"><img src="docs/screenshots/gazebo/mycomb.png" width="180" alt="mycomb in Gazebo Fortress"/></a> | <a href="docs/screenshots/mujoco/mycomb.png"><img src="docs/screenshots/mujoco/mycomb.png" width="180" alt="mycomb in MuJoCo"/></a> | <a href="docs/screenshots/isaac/mycomb.png"><img src="docs/screenshots/isaac/mycomb.png" width="180" alt="mycomb in Isaac Sim / Lab"/></a> |
 | `nova5` | <a href="docs/screenshots/rviz/nova5.png"><img src="docs/screenshots/rviz/nova5.png" width="180" alt="nova5 in RViz2"/></a> | <a href="docs/screenshots/gazebo/nova5.png"><img src="docs/screenshots/gazebo/nova5.png" width="180" alt="nova5 in Gazebo Fortress"/></a> | <a href="docs/screenshots/mujoco/nova5.png"><img src="docs/screenshots/mujoco/nova5.png" width="180" alt="nova5 in MuJoCo"/></a> | <a href="docs/screenshots/isaac/nova5.png"><img src="docs/screenshots/isaac/nova5.png" width="180" alt="nova5 in Isaac Sim / Lab"/></a> |
 | `nova5_2f85` | <a href="docs/screenshots/rviz/nova5_2f85.png"><img src="docs/screenshots/rviz/nova5_2f85.png" width="180" alt="nova5_2f85 in RViz2"/></a> | <a href="docs/screenshots/gazebo/nova5_2f85.png"><img src="docs/screenshots/gazebo/nova5_2f85.png" width="180" alt="nova5_2f85 in Gazebo Fortress"/></a> | <a href="docs/screenshots/mujoco/nova5_2f85.png"><img src="docs/screenshots/mujoco/nova5_2f85.png" width="180" alt="nova5_2f85 in MuJoCo"/></a> | <a href="docs/screenshots/isaac/nova5_2f85.png"><img src="docs/screenshots/isaac/nova5_2f85.png" width="180" alt="nova5_2f85 in Isaac Sim / Lab"/></a> |
-| `robotiq_2f85` | <a href="docs/screenshots/rviz/robotiq_2f85.png"><img src="docs/screenshots/rviz/robotiq_2f85.png" width="180" alt="robotiq_2f85 in RViz2"/></a> | <a href="docs/screenshots/gazebo/robotiq_2f85.png"><img src="docs/screenshots/gazebo/robotiq_2f85.png" width="180" alt="robotiq_2f85 in Gazebo Fortress"/></a> | <a href="docs/screenshots/mujoco/robotiq_2f85.png"><img src="docs/screenshots/mujoco/robotiq_2f85.png" width="180" alt="robotiq_2f85 in MuJoCo"/></a> | <a href="docs/screenshots/isaac/robotiq_2f85.png"><img src="docs/screenshots/isaac/robotiq_2f85.png" width="180" alt="robotiq_2f85 in Isaac Sim / Lab"/></a> |
 
-<sub>32/32 screenshots captured. Regenerate: see [Screenshots](#screenshots).</sub>
+<sub>28/28 screenshots captured. Regenerate: see [Screenshots](#screenshots).</sub>
 <!-- gallery:end -->
 
 ---

@@ -29,7 +29,6 @@ REGISTRY = yaml.safe_load(open(REPO / "robots.yaml"))["robots"]
 # actuated joint of their URDF. Mimic joints are always left passive: PhysX enforces them through
 # the importer's mimic constraint, and driving them as well makes the solver blow up (NaN).
 GAINS = {  # robot: (stiffness, damping)
-    "robotiq_2f85": (100.0, 5.0),
     "mycobot_280_pi": (20.0, 2.0),
     "mycobot_280_gripper": (20.0, 2.0),
     "mycomb": (20.0, 2.0),
