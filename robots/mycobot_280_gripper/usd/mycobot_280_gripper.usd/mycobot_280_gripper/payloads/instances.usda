@@ -1,0 +1,452 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    doc = """Generated from Composed Stage of root layer /tmp/tmpbty3xrmb/firefighter.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_mycobot_280_gripper_vmxw42x_/usdex_mycobot_280_gripper/firefighter.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_mycobot_280_gripper_vmxw42x_/temp_mycobot_280_gripper/mycobot_280_gripper.usd
+
+
+Generated from Composed Stage of root layer <repo>/robots/mycobot_280_gripper/usd/mycobot_280_gripper.usd/mycobot_280_gripper/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Scope "Instances"
+{
+    def Xform "joint1" (
+        prepend references = @./geometries.usd@</Geometries/joint1>
+    )
+    {
+        over "joint1" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/joint1/VisualMaterials/material0>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "material0" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/material0>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "joint1_1" (
+        prepend references = @./geometries.usd@</Geometries/joint1>
+    )
+    {
+        over "joint1" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "joint2" (
+        prepend references = @./geometries.usd@</Geometries/joint2>
+    )
+    {
+        over "joint2" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/joint2/VisualMaterials/material0_1>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "material0_1" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/material0_1>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "joint2_1" (
+        prepend references = @./geometries.usd@</Geometries/joint2>
+    )
+    {
+        over "joint2" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "joint3" (
+        prepend references = @./geometries.usd@</Geometries/joint3>
+    )
+    {
+        over "joint3" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/joint3/VisualMaterials/material0_2>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "material0_2" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/material0_2>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "joint3_1" (
+        prepend references = @./geometries.usd@</Geometries/joint3>
+    )
+    {
+        over "joint3" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "joint4" (
+        prepend references = @./geometries.usd@</Geometries/joint4>
+    )
+    {
+        over "joint4" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/joint4/VisualMaterials/material0_3>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "material0_3" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/material0_3>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "joint4_1" (
+        prepend references = @./geometries.usd@</Geometries/joint4>
+    )
+    {
+        over "joint4" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "joint5" (
+        prepend references = @./geometries.usd@</Geometries/joint5>
+    )
+    {
+        over "joint5" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/joint5/VisualMaterials/material0_4>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "material0_4" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/material0_3>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "joint5_1" (
+        prepend references = @./geometries.usd@</Geometries/joint5>
+    )
+    {
+        over "joint5" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "joint6" (
+        prepend references = @./geometries.usd@</Geometries/joint6>
+    )
+    {
+        over "joint6" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/joint6/VisualMaterials/material0_5>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "material0_5" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/material0_5>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "joint6_1" (
+        prepend references = @./geometries.usd@</Geometries/joint6>
+    )
+    {
+        over "joint6" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "joint7" (
+        prepend references = @./geometries.usd@</Geometries/joint7>
+    )
+    {
+        over "joint7" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/joint7/VisualMaterials/material0_6>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "material0_6" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/material0_6>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "joint7_1" (
+        prepend references = @./geometries.usd@</Geometries/joint7>
+    )
+    {
+        over "joint7" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "gripper_base" (
+        prepend references = @./geometries.usd@</Geometries/gripper_base>
+    )
+    {
+        over "gripper_base"
+        {
+        }
+    }
+
+    def Xform "gripper_base_1" (
+        prepend references = @./geometries.usd@</Geometries/gripper_base>
+    )
+    {
+        over "gripper_base" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "gripper_left3" (
+        prepend references = @./geometries.usd@</Geometries/gripper_left3>
+    )
+    {
+        over "gripper_left3"
+        {
+        }
+    }
+
+    def Xform "gripper_left3_1" (
+        prepend references = @./geometries.usd@</Geometries/gripper_left3>
+    )
+    {
+        over "gripper_left3" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "gripper_left1" (
+        prepend references = @./geometries.usd@</Geometries/gripper_left1>
+    )
+    {
+        over "gripper_left1"
+        {
+        }
+    }
+
+    def Xform "gripper_left1_1" (
+        prepend references = @./geometries.usd@</Geometries/gripper_left1>
+    )
+    {
+        over "gripper_left1" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "gripper_left2" (
+        prepend references = @./geometries.usd@</Geometries/gripper_left2>
+    )
+    {
+        over "gripper_left2"
+        {
+        }
+    }
+
+    def Xform "gripper_left2_1" (
+        prepend references = @./geometries.usd@</Geometries/gripper_left2>
+    )
+    {
+        over "gripper_left2" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "gripper_right3" (
+        prepend references = @./geometries.usd@</Geometries/gripper_right3>
+    )
+    {
+        over "gripper_right3"
+        {
+        }
+    }
+
+    def Xform "gripper_right3_1" (
+        prepend references = @./geometries.usd@</Geometries/gripper_right3>
+    )
+    {
+        over "gripper_right3" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "gripper_right1" (
+        prepend references = @./geometries.usd@</Geometries/gripper_right1>
+    )
+    {
+        over "gripper_right1"
+        {
+        }
+    }
+
+    def Xform "gripper_right1_1" (
+        prepend references = @./geometries.usd@</Geometries/gripper_right1>
+    )
+    {
+        over "gripper_right1" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "gripper_right2" (
+        prepend references = @./geometries.usd@</Geometries/gripper_right2>
+    )
+    {
+        over "gripper_right2"
+        {
+        }
+    }
+
+    def Xform "gripper_right2_1" (
+        prepend references = @./geometries.usd@</Geometries/gripper_right2>
+    )
+    {
+        over "gripper_right2" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "G_base" (
+        prepend references = @./geometries.usd@</Geometries/G_base>
+    )
+    {
+        over "G_base"
+        {
+        }
+    }
+
+    def Xform "G_base_1" (
+        prepend references = @./geometries.usd@</Geometries/G_base>
+    )
+    {
+        over "G_base" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+}
+

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="myAGV">
+  <link name="base_footprint">
+    <!-- placeholder inertial added by normalize_urdf.py - replace with CAD values -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.8" />
+      <inertia ixx="6.480e-04" ixy="0" ixz="0" iyy="6.480e-04" iyz="0" izz="6.480e-04" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://cps_robot_description/robots/myagv/meshes/myagv_base.dae" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <material name="black">
+        <color rgba="0.7 0.7 0.0 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="package://cps_robot_description/robots/myagv/meshes/myagv_base.dae" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="base_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+    <parent link="base_footprint" />
+    <child link="base_link" />
+    <axis xyz="0 0 1" />
+  </joint>
+  <link name="base_link">
+    <!-- placeholder inertial added by normalize_urdf.py - replace with CAD values -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.8" />
+      <inertia ixx="6.480e-04" ixy="0" ixz="0" iyy="6.480e-04" iyz="0" izz="6.480e-04" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://cps_robot_description/robots/myagv/meshes/myagv_up.dae" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <material name="black">
+        <color rgba="0.7 0.7 0.0 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="package://cps_robot_description/robots/myagv/meshes/myagv_up.dae" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

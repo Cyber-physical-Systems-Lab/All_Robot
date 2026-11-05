@@ -1,0 +1,460 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "nova5_robot"
+    doc = """Generated from Composed Stage of root layer /tmp/tmpxwlk8hw6/nova5_robot.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_nova5_2f85_m50ld1ku/usdex_nova5_2f85/nova5_robot.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_nova5_2f85_m50ld1ku/temp_nova5_2f85/nova5_2f85.usd
+
+
+Generated from Composed Stage of root layer <repo>/robots/nova5_2f85/usd/nova5_2f85.usd/nova5_2f85/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "nova5_robot"
+{
+    over "Physics"
+    {
+        def MjcActuator "joint1_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 150
+            uniform double mjc:forceRange:min = -150
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </nova5_robot/Physics/joint1>
+        }
+
+        def MjcActuator "joint2_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 150
+            uniform double mjc:forceRange:min = -150
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </nova5_robot/Physics/joint2>
+        }
+
+        def MjcActuator "joint3_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 150
+            uniform double mjc:forceRange:min = -150
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </nova5_robot/Physics/joint3>
+        }
+
+        def MjcActuator "joint4_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 150
+            uniform double mjc:forceRange:min = -150
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </nova5_robot/Physics/joint4>
+        }
+
+        def MjcActuator "joint5_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 150
+            uniform double mjc:forceRange:min = -150
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </nova5_robot/Physics/joint5>
+        }
+
+        def MjcActuator "joint6_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 150
+            uniform double mjc:forceRange:min = -150
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </nova5_robot/Physics/joint6>
+        }
+
+        def MjcActuator "finger_joint_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </nova5_robot/Physics/finger_joint>
+        }
+
+        def MjcActuator "left_inner_knuckle_joint_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </nova5_robot/Physics/left_inner_knuckle_joint>
+        }
+
+        def MjcActuator "left_inner_finger_joint_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </nova5_robot/Physics/left_inner_finger_joint>
+        }
+
+        def MjcActuator "right_inner_knuckle_joint_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </nova5_robot/Physics/right_inner_knuckle_joint>
+        }
+
+        def MjcActuator "right_inner_finger_joint_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </nova5_robot/Physics/right_inner_finger_joint>
+        }
+
+        def MjcActuator "right_outer_knuckle_joint_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </nova5_robot/Physics/right_outer_knuckle_joint>
+        }
+
+        over "finger_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "left_inner_knuckle_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "right_inner_knuckle_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "right_outer_knuckle_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "tool"
+        {
+        }
+
+        over "left_outer_finger_joint"
+        {
+        }
+
+        over "left_inner_finger_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "right_inner_finger_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "right_outer_finger_joint"
+        {
+        }
+
+        over "flange"
+        {
+        }
+
+        over "joint6" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "joint5" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "joint4" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "joint3" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "joint2" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "joint1" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "dummy_joint"
+        {
+        }
+    }
+
+    over "Geometry"
+    {
+        over "dummy_link"
+        {
+            over "base_link"
+            {
+                over "Link1"
+                {
+                    over "Link2"
+                    {
+                        over "Link3"
+                        {
+                            over "Link4"
+                            {
+                                over "Link5"
+                                {
+                                    over "Link6"
+                                    {
+                                        over "tool_link"
+                                        {
+                                            over "robotiq_85_base_link"
+                                            {
+                                                over "left_outer_knuckle"
+                                                {
+                                                    over "left_outer_finger"
+                                                    {
+                                                        over "outer_finger_fine"
+                                                        {
+                                                        }
+
+                                                        over "outer_finger_coarse"
+                                                        {
+                                                        }
+                                                    }
+
+                                                    over "outer_knuckle_fine"
+                                                    {
+                                                    }
+
+                                                    over "outer_knuckle_coarse"
+                                                    {
+                                                    }
+                                                }
+
+                                                over "left_inner_knuckle"
+                                                {
+                                                    over "left_inner_finger"
+                                                    {
+                                                        over "inner_finger_fine"
+                                                        {
+                                                        }
+
+                                                        over "inner_finger_coarse"
+                                                        {
+                                                        }
+                                                    }
+
+                                                    over "inner_knuckle_fine"
+                                                    {
+                                                    }
+
+                                                    over "inner_knuckle_coarse"
+                                                    {
+                                                    }
+                                                }
+
+                                                over "right_inner_knuckle"
+                                                {
+                                                    over "right_inner_finger"
+                                                    {
+                                                        over "inner_finger_fine"
+                                                        {
+                                                        }
+
+                                                        over "inner_finger_coarse"
+                                                        {
+                                                        }
+                                                    }
+
+                                                    over "inner_knuckle_fine"
+                                                    {
+                                                    }
+
+                                                    over "inner_knuckle_coarse"
+                                                    {
+                                                    }
+                                                }
+
+                                                over "right_outer_knuckle"
+                                                {
+                                                    over "right_outer_finger"
+                                                    {
+                                                        over "outer_finger_fine"
+                                                        {
+                                                        }
+
+                                                        over "outer_finger_coarse"
+                                                        {
+                                                        }
+                                                    }
+
+                                                    over "outer_knuckle_fine"
+                                                    {
+                                                    }
+
+                                                    over "outer_knuckle_coarse"
+                                                    {
+                                                    }
+                                                }
+
+                                                over "robotiq_85_base_link_fine"
+                                                {
+                                                }
+
+                                                over "robotiq_85_base_link_coarse"
+                                                {
+                                                }
+                                            }
+                                        }
+
+                                        over "Link6"
+                                        {
+                                        }
+
+                                        over "Link6_1"
+                                        {
+                                        }
+                                    }
+
+                                    over "Link5"
+                                    {
+                                    }
+
+                                    over "Link5_1"
+                                    {
+                                    }
+                                }
+
+                                over "Link4"
+                                {
+                                }
+
+                                over "Link4_1"
+                                {
+                                }
+                            }
+
+                            over "Link3"
+                            {
+                            }
+
+                            over "Link3_1"
+                            {
+                            }
+                        }
+
+                        over "Link2"
+                        {
+                        }
+
+                        over "Link2_1"
+                        {
+                        }
+                    }
+
+                    over "Link1"
+                    {
+                    }
+
+                    over "Link1_1"
+                    {
+                    }
+                }
+
+                over "base_link"
+                {
+                }
+
+                over "base_link_1"
+                {
+                }
+            }
+        }
+    }
+
+    over "Materials"
+    {
+    }
+
+    over "VisualMaterials"
+    {
+    }
+}
+

@@ -1,0 +1,83 @@
+# One image per simulator. The repo is bind-mounted (edits on the host are live).
+# Use docker/run.sh rather than calling compose directly; it sets up X11 and the GPU.
+#
+#   docker/run.sh ros_gz   ros2 launch cps_robot_description gazebo.launch.py robot:=nova5_2f85
+#   docker/run.sh mujoco   python -m mujoco.viewer --mjcf=robots/nova5_2f85/mjcf/scene.xml
+#   docker/run.sh isaaclab /workspace/isaaclab/isaaclab.sh -p isaaclab/spawn_robot.py --robot nova5_2f85
+
+x-display: &display
+  network_mode: host
+  ipc: host
+  environment:
+    - DISPLAY=${DISPLAY:-:0}
+    - QT_X11_NO_MITSHM=1
+    - XAUTHORITY=/tmp/.Xauthority
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    - ${XAUTHORITY:-/dev/null}:/tmp/.Xauthority:ro
+
+x-gpu: &gpu
+  deploy:
+    resources:
+      reservations:
+        devices:
+          - driver: nvidia
+            count: all
+            capabilities: [gpu, graphics, utility, compute, display]
+
+services:
+  ros_gz:
+    image: cps/ros_gz:humble-fortress
+    build: {context: .., dockerfile: docker/ros_gz/Dockerfile}
+    <<: *display
+    environment:
+      - DISPLAY=${DISPLAY:-:0}
+      - QT_X11_NO_MITSHM=1
+      - XAUTHORITY=/tmp/.Xauthority
+      - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ${XAUTHORITY:-/dev/null}:/tmp/.Xauthority:ro
+      - ..:/ws/src/All_Robot
+      - ros_gz_build:/ws/build
+      - ros_gz_install:/ws/install
+
+  mujoco:
+    image: cps/mujoco:3
+    build: {context: .., dockerfile: docker/mujoco/Dockerfile}
+    <<: *display
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ${XAUTHORITY:-/dev/null}:/tmp/.Xauthority:ro
+      - ..:/workspace/All_Robot
+
+  isaaclab:
+    image: cps/isaaclab:4.5.0-2.1.0
+    build:
+      context: ..
+      dockerfile: docker/isaaclab/Dockerfile
+      args: {ISAACSIM_VERSION: "4.5.0", ISAACLAB_VERSION: "v2.1.0", ISAACLAB_RL: "${ISAACLAB_RL:-none}"}
+    <<: [*display, *gpu]
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ${XAUTHORITY:-/dev/null}:/tmp/.Xauthority:ro
+      - ..:/workspace/All_Robot
+      # caches: the first start compiles shaders / pulls extensions; keep them between runs
+      - isaac-cache-kit:/isaac-sim/kit/cache
+      - isaac-cache-ov:/root/.cache/ov
+      - isaac-cache-pip:/root/.cache/pip
+      - isaac-cache-gl:/root/.cache/nvidia/GLCache
+      - isaac-cache-compute:/root/.nv/ComputeCache
+      - isaac-logs:/root/.nvidia-omniverse/logs
+      - isaac-data:/root/.local/share/ov/data
+
+volumes:
+  ros_gz_build:
+  ros_gz_install:
+  isaac-cache-kit:
+  isaac-cache-ov:
+  isaac-cache-pip:
+  isaac-cache-gl:
+  isaac-cache-compute:
+  isaac-logs:
+  isaac-data:

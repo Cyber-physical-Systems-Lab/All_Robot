@@ -1,0 +1,115 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "myAGV"
+    doc = """Generated from Composed Stage of root layer /tmp/tmptp55se1a/myAGV.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_myagv_jnd_r5h2/usdex_myagv/myAGV.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_myagv_jnd_r5h2/temp_myagv/myagv.usd
+
+
+Generated from Composed Stage of root layer <repo>/robots/myagv/usd/myagv.usd/myagv/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./robot.usda@
+    ]
+    upAxis = "Z"
+)
+
+def Xform "myAGV" (
+    prepend apiSchemas = ["GeomModelAPI", "IsaacRobotAPI"]
+    assetInfo = {
+        string name = "myAGV"
+    }
+    kind = "component"
+)
+{
+    float3[] extentsHint = [(-0.14966904, -0.118689895, -6.055832e-9), (0.16365825, 0.110310115, 0.13222198), (3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (-0.14966904, -0.118689895, -6.055832e-9), (0.16365825, 0.110310115, 0.13222198)]
+    custom rel isaac:physics:robotJoints
+    custom rel isaac:physics:robotLinks
+    custom token isaac:robotType = "Default"
+
+    def Scope "Materials"
+    {
+    }
+
+    def Scope "Geometry"
+    {
+        def Xform "base_footprint" (
+            prepend apiSchemas = ["IsaacLinkAPI"]
+        )
+        {
+            def Xform "myagv_base" (
+                instanceable = true
+                prepend references = @./instances.usda@</Instances/myagv_base>
+            )
+            {
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Xform "base_link" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Xform "myagv_up" (
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/myagv_up>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "myagv_up_1" (
+                    displayName = "myagv_up"
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/myagv_up_1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+            }
+
+            def Xform "myagv_base_1" (
+                displayName = "myagv_base"
+                instanceable = true
+                prepend references = @./instances.usda@</Instances/myagv_base_1>
+            )
+            {
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+        }
+    }
+
+    def Scope "Physics"
+    {
+    }
+
+    def Scope "VisualMaterials"
+    {
+    }
+}
+

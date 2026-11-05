@@ -1,0 +1,3 @@
+# Images only need docker/ (the repo itself is bind-mounted at run time)
+*
+!docker/

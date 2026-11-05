@@ -1,0 +1,64 @@
+<mujoco model="nova5_robot">
+  <compiler angle="radian" />
+  <asset>
+    <mesh name="base_link" content_type="model/stl" file="../meshes/base_link.STL" />
+    <mesh name="Link1" content_type="model/stl" file="../meshes/Link1.STL" />
+    <mesh name="Link2" content_type="model/stl" file="../meshes/Link2.STL" />
+    <mesh name="Link3" content_type="model/stl" file="../meshes/Link3.STL" />
+    <mesh name="Link4" content_type="model/stl" file="../meshes/Link4.STL" />
+    <mesh name="Link5" content_type="model/stl" file="../meshes/Link5.STL" />
+    <mesh name="Link6" content_type="model/stl" file="../meshes/Link6.STL" />
+  </asset>
+  <worldbody>
+    <body name="base_link">
+      <inertial pos="0 0 0" quat="0.706241 -0.000250308 -0.000243869 0.707972" mass="1.31064" diaginertia="0.00309759 0.00308109 0.00232835" />
+      <geom quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" density="0" mesh="base_link" />
+      <geom quat="1 0 0 0" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="base_link" />
+      <body name="Link1" pos="0 0 0.24">
+        <inertial pos="0 0 0" quat="0.684555 0.177181 -0.176991 0.684592" mass="1.08091" diaginertia="0.00284011 0.00265963 0.00128069" />
+        <joint name="joint1" range="-6.28 6.28" actuatorfrcrange="-150 150" damping="1" armature="0.01" />
+        <geom quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" density="0" mesh="Link1" />
+        <geom quat="1 0 0 0" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Link1" />
+        <body name="Link2" quat="-0.491193 -0.49119 -0.508657 0.508654">
+          <inertial pos="-0.199338 -0.00696463 0.109209" quat="-0.0124484 0.700654 0.0122458 0.713287" mass="2.54585" diaginertia="0.0643202 0.0637511 0.00275793" />
+          <joint name="joint2" range="-3.14 3.14" actuatorfrcrange="-150 150" damping="1" armature="0.01" />
+          <geom pos="0 0 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" density="0" mesh="Link2" />
+          <geom pos="0 0 0" quat="1 0 0 0" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Link2" />
+          <body name="Link3" pos="-0.399756 -0.013969 0">
+            <inertial pos="-0.152357 -0.00535717 0.0198992" quat="-0.0125445 0.707695 0.0121511 0.706302" mass="1.40746" diaginertia="0.0235997 0.0232013 0.00098083" />
+            <joint name="joint3" range="-2.79 2.79" actuatorfrcrange="-150 150" damping="1" armature="0.01" />
+            <geom pos="0 0 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" density="0" mesh="Link3" />
+            <geom pos="0 0 0" quat="1 0 0 0" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Link3" />
+            <body name="Link4" pos="-0.329799 -0.0115244 0.135" quat="0.719348 0 0 -0.69465">
+              <inertial pos="-6.37112e-06 -0.022759 -0.0202382" quat="0.648587 0.282308 -0.28212 0.648109" mass="0.439666" diaginertia="0.000676686 0.000634739 0.000253769" />
+              <joint name="joint4" range="-6.28 6.28" actuatorfrcrange="-150 150" damping="1" armature="0.01" />
+              <geom quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" density="0" mesh="Link4" />
+              <geom quat="1 0 0 0" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Link4" />
+              <body name="Link5" pos="0 -0.12 0" quat="0.707105 0.707108 0 0">
+                <inertial pos="-1.27926e-06 0.00190912 -0.00761119" quat="0.393821 0.587386 -0.587227 0.39376" mass="0.574835" diaginertia="0.00069052 0.000663177 0.000348157" />
+                <joint name="joint5" range="-6.28 6.28" actuatorfrcrange="-150 150" damping="1" armature="0.01" />
+                <geom quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" density="0" mesh="Link5" />
+                <geom quat="1 0 0 0" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Link5" />
+                <body name="Link6" pos="0 0.088328 0" quat="0.707105 -0.707108 0 0">
+                  <inertial pos="1.54762e-06 0.000151599 -0.0194592" quat="0.000736825 0.707106 0.000566044 0.707107" mass="0.12968" diaginertia="7.78631e-05 5.054e-05 5.02803e-05" />
+                  <joint name="joint6" range="-6.28 6.28" actuatorfrcrange="-150 150" damping="1" armature="0.01" />
+                  <geom quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.752941 0.752941 0.752941 1" density="0" mesh="Link6" />
+                  <geom quat="1 0 0 0" type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="Link6" />
+                  <body name="tool_link" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <position name="act_joint1" joint="joint1" kp="50" ctrlrange="-6.28 6.28" />
+    <position name="act_joint2" joint="joint2" kp="50" ctrlrange="-3.14 3.14" />
+    <position name="act_joint3" joint="joint3" kp="50" ctrlrange="-2.79 2.79" />
+    <position name="act_joint4" joint="joint4" kp="50" ctrlrange="-6.28 6.28" />
+    <position name="act_joint5" joint="joint5" kp="50" ctrlrange="-6.28 6.28" />
+    <position name="act_joint6" joint="joint6" kp="50" ctrlrange="-6.28 6.28" />
+  </actuator>
+</mujoco>

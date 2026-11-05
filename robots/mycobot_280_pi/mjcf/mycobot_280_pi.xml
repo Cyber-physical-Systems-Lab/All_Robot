@@ -1,0 +1,87 @@
+<mujoco model="firefighter">
+  <compiler angle="radian" />
+  <asset>
+    <mesh name="G_base" content_type="model/stl" file="../meshes/flat/G_base.stl" />
+    <mesh name="pump_box" content_type="model/stl" file="../meshes/flat/pump_box.stl" />
+    <mesh name="joint1_pi" content_type="model/stl" file="../meshes/flat/joint1_pi.stl" />
+    <mesh name="joint2" content_type="model/stl" file="../meshes/flat/joint2.stl" />
+    <mesh name="joint3" content_type="model/stl" file="../meshes/flat/joint3.stl" />
+    <mesh name="joint4" content_type="model/stl" file="../meshes/flat/joint4.stl" />
+    <mesh name="joint5" content_type="model/stl" file="../meshes/flat/joint5.stl" />
+    <mesh name="joint6" content_type="model/stl" file="../meshes/flat/joint6.stl" />
+    <mesh name="joint7" content_type="model/stl" file="../meshes/flat/joint7.stl" />
+    <mesh name="camera_flange" content_type="model/stl" file="../meshes/flat/camera_flange.stl" />
+    <mesh name="pump_head" content_type="model/stl" file="../meshes/flat/pump_head.stl" />
+  </asset>
+  <worldbody>
+    <body name="g_base">
+      <inertial pos="0 0 0" mass="0.1" diaginertia="3.6e-05 3.6e-05 3.6e-05" />
+      <geom pos="0 0 -0.03" quat="0.707105 0 0 0.707108" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="G_base" />
+      <geom pos="0 0 -0.03" quat="0.707105 0 0 0.707108" type="mesh" mesh="G_base" />
+      <body name="joint1">
+        <inertial pos="0 0 0" mass="0.1" diaginertia="3.6e-05 3.6e-05 3.6e-05" />
+        <geom pos="0 0 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="joint1_pi" />
+        <geom pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="joint1_pi" />
+        <body name="joint2" pos="0 0 0.13956">
+          <inertial pos="0 0 0" mass="0.1" diaginertia="3.6e-05 3.6e-05 3.6e-05" />
+          <joint name="joint2_to_joint1" range="-2.9322 2.9322" actuatorfrcrange="-1000 1000" damping="1" armature="0.01" />
+          <geom pos="0 0 -0.06096" quat="0.707105 0 0 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="joint2" />
+          <geom pos="0 0 -0.06096" quat="0.707105 0 0 -0.707108" type="mesh" mesh="joint2" />
+          <body name="joint3" pos="0 0 -0.001" quat="0.499998 0.500002 0.5 -0.5">
+            <inertial pos="0 0 0" mass="0.1" diaginertia="3.6e-05 3.6e-05 3.6e-05" />
+            <joint name="joint3_to_joint2" range="-2.3562 2.3562" actuatorfrcrange="-1000 1000" damping="1" armature="0.01" />
+            <geom pos="0 0 0.03256" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="joint3" />
+            <geom pos="0 0 0.03256" quat="0.707105 0 -0.707108 0" type="mesh" mesh="joint3" />
+            <body name="joint4" pos="-0.1104 0 0">
+              <inertial pos="0 0 0" mass="0.1" diaginertia="3.6e-05 3.6e-05 3.6e-05" />
+              <joint name="joint4_to_joint3" range="-2.618 2.618" actuatorfrcrange="-1000 1000" damping="1" armature="0.01" />
+              <geom pos="0 0 0.03056" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="joint4" />
+              <geom pos="0 0 0.03056" quat="0.707105 0 -0.707108 0" type="mesh" mesh="joint4" />
+              <body name="joint5" pos="-0.096 0 0.06462" quat="0.707105 0 0 -0.707108">
+                <inertial pos="0 0 0" mass="0.1" diaginertia="3.6e-05 3.6e-05 3.6e-05" />
+                <joint name="joint5_to_joint4" range="-2.5307 2.5307" actuatorfrcrange="-1000 1000" damping="1" armature="0.01" />
+                <geom pos="0 -0.001 -0.0345" quat="0.499998 0.500002 -0.5 0.5" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="joint5" />
+                <geom pos="0 -0.001 -0.0345" quat="0.499998 0.500002 -0.5 0.5" type="mesh" mesh="joint5" />
+                <body name="joint6" pos="0 -0.07318 -0.001" quat="0.499998 0.5 -0.5 0.500002">
+                  <inertial pos="0 0 0" mass="0.1" diaginertia="3.6e-05 3.6e-05 3.6e-05" />
+                  <joint name="joint6_to_joint5" range="-2.8798 2.8798" actuatorfrcrange="-1000 1000" damping="1" armature="0.01" />
+                  <geom pos="0 0 -0.038" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="joint6" />
+                  <geom pos="0 0 -0.038" quat="1 0 0 0" type="mesh" mesh="joint6" />
+                  <body name="joint6_flange" pos="0 0.0456 0" quat="0.707105 -0.707108 0 0">
+                    <inertial pos="0 0 0" mass="0.1" diaginertia="3.6e-05 3.6e-05 3.6e-05" />
+                    <joint name="joint6output_to_joint6" range="-3.14159 3.14159" actuatorfrcrange="-1000 1000" damping="1" armature="0.01" />
+                    <geom pos="0 0 -0.012" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="joint7" />
+                    <geom pos="0 0 -0.012" quat="1 0 0 0" type="mesh" mesh="joint7" />
+                    <body name="camera_flange" pos="0 0 0.01" quat="0.7042 0.710001 0 0">
+                      <inertial pos="0 0 0" mass="0.1" diaginertia="3.6e-05 3.6e-05 3.6e-05" />
+                      <geom pos="0.024 -0.008 0" quat="1.32679e-06 0 1 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="camera_flange" />
+                      <geom pos="0.024 -0.008 0" quat="1.32679e-06 0 1 0" type="mesh" mesh="camera_flange" />
+                      <body name="pump_head" pos="0 0 0.01" quat="0.7042 -0.710001 0 0">
+                        <inertial pos="0 0 0" mass="0.1" diaginertia="3.6e-05 3.6e-05 3.6e-05" />
+                        <geom pos="0 0.008 0.009" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="pump_head" />
+                        <geom pos="0 0.008 0.009" quat="0.707105 0.707108 0 0" type="mesh" mesh="pump_head" />
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="pump_box">
+        <inertial pos="0 0 0" mass="0.1" diaginertia="3.6e-05 3.6e-05 3.6e-05" />
+        <geom pos="0 -0.15 0" quat="9.38184e-07 9.38187e-07 0.707105 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="pump_box" />
+        <geom pos="0 -0.15 0" quat="9.38184e-07 9.38187e-07 0.707105 -0.707108" type="mesh" mesh="pump_box" />
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <position name="act_joint2_to_joint1" joint="joint2_to_joint1" kp="50" ctrlrange="-2.9322 2.9322" />
+    <position name="act_joint3_to_joint2" joint="joint3_to_joint2" kp="50" ctrlrange="-2.3562 2.3562" />
+    <position name="act_joint4_to_joint3" joint="joint4_to_joint3" kp="50" ctrlrange="-2.618 2.618" />
+    <position name="act_joint5_to_joint4" joint="joint5_to_joint4" kp="50" ctrlrange="-2.5307 2.5307" />
+    <position name="act_joint6_to_joint5" joint="joint6_to_joint5" kp="50" ctrlrange="-2.8798 2.8798" />
+    <position name="act_joint6output_to_joint6" joint="joint6output_to_joint6" kp="50" ctrlrange="-3.14159 3.14159" />
+  </actuator>
+</mujoco>

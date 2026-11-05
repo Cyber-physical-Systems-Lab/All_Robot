@@ -1,0 +1,125 @@
+name: validate-models
+
+# push / PR: validate every model in MuJoCo, urdfdom and Gazebo, and attach screenshots as an artifact.
+# The committed screenshots are rendered locally (GPU, see README "Screenshots"). Only a manual run
+# (Actions -> validate-models -> Run workflow, commit_screenshots=true) commits the CI renders
+# of docs/screenshots/{rviz,gazebo,mujoco}/*.png + the README gallery back to the branch.
+# Isaac screenshots need an RTX GPU: run  bash scripts/screenshot_isaac.sh  locally.
+
+on:
+  push:
+    branches: [main, unified-models]
+    paths-ignore: ["docs/screenshots/**"]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      commit_screenshots:
+        description: "Commit screenshots + README gallery back to the branch"
+        type: boolean
+        default: false
+
+jobs:
+  urdf-and-mujoco:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - name: Install (same pins as envs/env_mujoco.yml) + CPU OpenGL
+        run: |
+          sudo apt-get update && sudo apt-get install -y libosmesa6
+          pip install pyyaml numpy "mujoco>=3.2,<4" "pycollada>=0.8"
+      - name: Static URDF checks
+        run: python scripts/validate.py -v
+      - name: README gallery matches docs/screenshots
+        run: python scripts/make_gallery.py --check
+      - name: Build MJCF + standalone / Isaac URDFs
+        id: build
+        continue-on-error: true      # one bad mesh must not block the other robots
+        run: python scripts/build_assets.py --mujoco --isaac
+      - name: MuJoCo load + step
+        continue-on-error: true
+        env: {MUJOCO_GL: osmesa}
+        run: python scripts/validate.py --mujoco --markdown status.md
+      - name: MuJoCo screenshots
+        continue-on-error: true
+        env: {MUJOCO_GL: osmesa}
+        run: python scripts/screenshot_mujoco.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: screenshots-mujoco, path: docs/screenshots/mujoco}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: mujoco-generated, path: "robots/*/mjcf\nrobots/*/meshes/flat\nrobots/*/urdf/standalone\nrobots/*/urdf/isaac"}
+      - if: always()
+        run: '[ -f status.md ] && cat status.md >> "$GITHUB_STEP_SUMMARY" || true'
+
+  ros2-gazebo:
+    runs-on: ubuntu-22.04
+    container: osrf/ros:humble-desktop
+    defaults: {run: {shell: bash}}
+    steps:
+      - uses: actions/checkout@v4
+        with: {path: src/All_Robot}
+      - name: Install ros_gz (Gazebo Fortress) + screenshot tools
+        run: |
+          apt-get update && apt-get install -y ros-humble-ros-gz ros-humble-joint-state-publisher \
+            python3-yaml liburdfdom-tools xvfb imagemagick x11-utils procps
+      - name: colcon build
+        run: source /opt/ros/humble/setup.bash && colcon build --packages-select cps_robot_description
+      - name: urdfdom (parser used by robot_state_publisher / RViz) accepts every URDF
+        continue-on-error: true
+        run: |
+          cd src/All_Robot
+          for u in $(python3 -c "import yaml;[print(c['urdf']) for c in yaml.safe_load(open('robots.yaml'))['robots'].values()]"); do
+            echo "== $u"; check_urdf "$u" | tail -3
+          done
+      - name: URDF -> SDF for every robot
+        continue-on-error: true
+        run: |
+          source /opt/ros/humble/setup.bash && source install/setup.bash
+          python3 src/All_Robot/scripts/validate.py --gazebo --markdown status.md
+      - name: RViz2 screenshots
+        continue-on-error: true
+        run: |
+          source /opt/ros/humble/setup.bash && source install/setup.bash
+          bash src/All_Robot/scripts/screenshot_ros.sh rviz
+      - name: Gazebo screenshots (software rendering, slow)
+        continue-on-error: true
+        env: {SHOT_WAIT: "40"}
+        run: |
+          source /opt/ros/humble/setup.bash && source install/setup.bash
+          bash src/All_Robot/scripts/screenshot_ros.sh gazebo
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: screenshots-ros, path: src/All_Robot/docs/screenshots}
+      - if: always()
+        run: '[ -f status.md ] && cat status.md >> "$GITHUB_STEP_SUMMARY" || true'
+
+  publish-screenshots:
+    # manual only: the committed screenshots are GPU renders made locally
+    if: github.event_name == 'workflow_dispatch' && inputs.commit_screenshots
+    needs: [urdf-and-mujoco, ros2-gazebo]
+    runs-on: ubuntu-22.04
+    permissions: {contents: write}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with: {name: screenshots-mujoco, path: docs/screenshots/mujoco}
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with: {name: screenshots-ros, path: docs/screenshots}
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with: {name: mujoco-generated, path: robots}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install pyyaml && python scripts/make_gallery.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/screenshots README.md robots
+          git diff --cached --quiet || git commit -m "docs: simulator screenshots + generated MJCF [skip ci]"
+          git push
