@@ -33,11 +33,12 @@
       </geometry>
       <origin xyz="0.0 -0.15 -0.0" rpy="1.5708 3.14159 0" />
     </visual>
+    <!-- collision origin aligned with visual (was copy-pasted from the mirrored link) -->
     <collision>
       <geometry>
         <mesh filename="../../meshes/pump_box.dae" />
       </geometry>
-      <origin xyz="0.0 0 -0.03" rpy="0 0 1.5708" />
+      <origin xyz="0.0 -0.15 -0.0" rpy="1.5708 3.14159 0" />
     </collision>
   </link>
   <link name="joint1">

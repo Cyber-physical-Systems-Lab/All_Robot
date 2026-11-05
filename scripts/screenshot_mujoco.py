@@ -19,6 +19,21 @@ from common import (CAM_AZIMUTH_DEG, CAM_ELEVATION_DEG, REPO, SCREENSHOT_DIR,  #
                     camera_view, load_registry, write_png)
 
 
+def apply_init_joints(m, d, init: dict) -> None:
+    """Set qpos and the matching position-actuator targets from {joint regex: value}."""
+    import re
+
+    import mujoco
+    for j in range(m.njnt):
+        name = mujoco.mj_id2name(m, mujoco.mjtObj.mjOBJ_JOINT, j) or ""
+        for pat, val in init.items():
+            if re.fullmatch(pat, name):
+                d.qpos[m.jnt_qposadr[j]] = val
+                for a in range(m.nu):
+                    if m.actuator_trnid[a, 0] == j:
+                        d.ctrl[a] = val
+
+
 def shoot(name: str, cfg: dict, width: int, height: int, settle_steps: int) -> Path:
     import mujoco
 
@@ -27,6 +42,7 @@ def shoot(name: str, cfg: dict, width: int, height: int, settle_steps: int) -> P
     m.vis.global_.offwidth = max(m.vis.global_.offwidth, width)
     m.vis.global_.offheight = max(m.vis.global_.offheight, height)
     d = mujoco.MjData(m)
+    apply_init_joints(m, d, cfg.get("init_joints", {}))
     mujoco.mj_forward(m, d)
     for _ in range(settle_steps):        # let free-floating robots land on the floor
         mujoco.mj_step(m, d)

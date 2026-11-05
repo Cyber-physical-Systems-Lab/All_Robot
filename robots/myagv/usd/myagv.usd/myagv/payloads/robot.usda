@@ -1,0 +1,53 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "myAGV"
+    doc = """Generated from Composed Stage of root layer /tmp/tmptp55se1a/myAGV.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_myagv_jnd_r5h2/usdex_myagv/myAGV.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_myagv_jnd_r5h2/temp_myagv/myagv.usd
+
+
+Generated from Composed Stage of root layer <repo>/robots/myagv/usd/myagv.usd/myagv/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "myAGV" (
+    prepend apiSchemas = ["IsaacRobotAPI"]
+)
+{
+    custom rel isaac:physics:robotJoints
+    custom rel isaac:physics:robotLinks
+
+    over "Physics"
+    {
+        over "base_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+    }
+
+    over "Geometry"
+    {
+        over "base_footprint" (
+            prepend apiSchemas = ["IsaacLinkAPI"]
+        )
+        {
+            over "base_link" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+        }
+    }
+}
+

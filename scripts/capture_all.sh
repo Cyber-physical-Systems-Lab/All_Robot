@@ -16,8 +16,8 @@ for s in "${SIMS[@]}"; do
   case "$s" in
     rviz)   docker/run.sh ros_gz bash scripts/screenshot_ros.sh rviz ;;
     gazebo) docker/run.sh ros_gz bash scripts/screenshot_ros.sh gazebo ;;
-    mujoco) docker/run.sh mujoco bash -c "python scripts/build_assets.py --mujoco && MUJOCO_GL=osmesa python scripts/screenshot_mujoco.py" ;;
-    isaac)  docker/run.sh isaaclab bash -c "bash isaaclab/convert_all.sh && /workspace/isaaclab/isaaclab.sh -p isaaclab/spawn_robot.py --robot all --screenshot --headless" ;;
+    mujoco) docker/run.sh mujoco bash -c "python scripts/build_assets.py --mujoco --isaac && MUJOCO_GL=osmesa python scripts/screenshot_mujoco.py" ;;
+    isaac)  docker/run.sh isaaclab bash -c "bash isaaclab/convert_all.sh && bash scripts/screenshot_isaac.sh" ;;
     *) echo "unknown simulator $s"; false ;;
   esac
   status+=("$s:$?")

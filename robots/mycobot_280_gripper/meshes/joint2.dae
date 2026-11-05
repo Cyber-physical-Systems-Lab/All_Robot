@@ -7,7 +7,7 @@
         </contributor>
         <created>Thu Sept 16 08:35:38 2021 GMT</created>
         <modified>Thu Sept 16 08:35:38 2021 GMT</modified>
-        <up_axis>Y_UP</up_axis>
+        <up_axis>Z_UP</up_axis>
     </asset>
     <library_images>
         <image id="texture0" name="texture0">

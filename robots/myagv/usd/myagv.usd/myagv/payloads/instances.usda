@@ -1,0 +1,96 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    doc = """Generated from Composed Stage of root layer /tmp/tmptp55se1a/myAGV.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_myagv_jnd_r5h2/usdex_myagv/myAGV.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_myagv_jnd_r5h2/temp_myagv/myagv.usd
+
+
+Generated from Composed Stage of root layer <repo>/robots/myagv/usd/myagv.usd/myagv/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Scope "Instances"
+{
+    def Xform "myagv_base" (
+        prepend references = @./geometries.usd@</Geometries/myagv_base>
+    )
+    {
+        over "myagv_base" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/myagv_base/VisualMaterials/black>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "black" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/black>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "myagv_base_1" (
+        prepend references = @./geometries.usd@</Geometries/myagv_base>
+    )
+    {
+        over "myagv_base" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "myagv_up" (
+        prepend references = @./geometries.usd@</Geometries/myagv_up>
+    )
+    {
+        over "myagv_up" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/myagv_up/VisualMaterials/black>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "black" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/black>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "myagv_up_1" (
+        prepend references = @./geometries.usd@</Geometries/myagv_up>
+    )
+    {
+        over "myagv_up" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+}
+

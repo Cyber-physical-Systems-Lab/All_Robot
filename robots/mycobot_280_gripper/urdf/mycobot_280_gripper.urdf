@@ -205,11 +205,12 @@
       <origin xyz="0.039 -0.0133 -0.012 " rpy=" 0 0 0" />
       <!-- <origin xyz = "0.0 0 -0.012 " rpy = " 0 0 0"/> -->
     </visual>
+    <!-- collision origin aligned with visual (was copy-pasted from the mirrored link) -->
     <collision>
       <geometry>
         <mesh filename="package://cps_robot_description/robots/mycobot_280_gripper/meshes/gripper_left1.dae" />
       </geometry>
-      <origin xyz="-0.039 -0.0133 -0.012 " rpy=" 0 0 0" />
+      <origin xyz="0.039 -0.0133 -0.012 " rpy=" 0 0 0" />
     </collision>
   </link>
   <link name="gripper_left2">
@@ -225,11 +226,12 @@
       </geometry>
       <origin xyz="0.005 -0.0195 -0.012 " rpy=" 0 0 0" />
     </visual>
+    <!-- collision origin aligned with visual (was copy-pasted from the mirrored link) -->
     <collision>
       <geometry>
         <mesh filename="package://cps_robot_description/robots/mycobot_280_gripper/meshes/gripper_left2.dae" />
       </geometry>
-      <origin xyz="-0.005 -0.0195 -0.012 " rpy=" 0 0 0" />
+      <origin xyz="0.005 -0.0195 -0.012 " rpy=" 0 0 0" />
     </collision>
   </link>
   <link name="gripper_left3">

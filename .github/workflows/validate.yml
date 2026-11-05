@@ -1,9 +1,10 @@
 name: validate-models
 
 # push / PR: validate every model in MuJoCo, urdfdom and Gazebo, and attach screenshots as an artifact.
-# Push to unified-models, or manual run (Actions -> validate-models -> Run workflow, commit_screenshots=true):
-#   also commits docs/screenshots/{rviz,gazebo,mujoco}/*.png + the README gallery back to the branch.
-# Isaac screenshots need an RTX GPU: run  bash scripts/capture_all.sh isaac  locally.
+# The committed screenshots are rendered locally (GPU, see README "Screenshots"). Only a manual run
+# (Actions -> validate-models -> Run workflow, commit_screenshots=true) commits the CI renders
+# of docs/screenshots/{rviz,gazebo,mujoco}/*.png + the README gallery back to the branch.
+# Isaac screenshots need an RTX GPU: run  bash scripts/screenshot_isaac.sh  locally.
 
 on:
   push:
@@ -30,10 +31,12 @@ jobs:
           pip install pyyaml numpy "mujoco>=3.2,<4" "pycollada>=0.8"
       - name: Static URDF checks
         run: python scripts/validate.py -v
-      - name: Build MJCF + standalone URDFs
+      - name: README gallery matches docs/screenshots
+        run: python scripts/make_gallery.py --check
+      - name: Build MJCF + standalone / Isaac URDFs
         id: build
         continue-on-error: true      # one bad mesh must not block the other robots
-        run: python scripts/build_assets.py --mujoco
+        run: python scripts/build_assets.py --mujoco --isaac
       - name: MuJoCo load + step
         continue-on-error: true
         env: {MUJOCO_GL: osmesa}
@@ -47,7 +50,7 @@ jobs:
         with: {name: screenshots-mujoco, path: docs/screenshots/mujoco}
       - uses: actions/upload-artifact@v4
         if: always()
-        with: {name: mujoco-generated, path: "robots/*/mjcf\nrobots/*/meshes/mujoco\nrobots/*/urdf/standalone"}
+        with: {name: mujoco-generated, path: "robots/*/mjcf\nrobots/*/meshes/flat\nrobots/*/urdf/standalone\nrobots/*/urdf/isaac"}
       - if: always()
         run: '[ -f status.md ] && cat status.md >> "$GITHUB_STEP_SUMMARY" || true'
 
@@ -94,10 +97,8 @@ jobs:
         run: '[ -f status.md ] && cat status.md >> "$GITHUB_STEP_SUMMARY" || true'
 
   publish-screenshots:
-    # automatic on pushes to unified-models (bot commits do not re-trigger workflows), or manual
-    if: >-
-      (github.event_name == 'workflow_dispatch' && inputs.commit_screenshots) ||
-      (github.event_name == 'push' && github.ref == 'refs/heads/unified-models')
+    # manual only: the committed screenshots are GPU renders made locally
+    if: github.event_name == 'workflow_dispatch' && inputs.commit_screenshots
     needs: [urdf-and-mujoco, ros2-gazebo]
     runs-on: ubuntu-22.04
     permissions: {contents: write}

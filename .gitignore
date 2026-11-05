@@ -19,3 +19,7 @@ robots/*/mjcf/_import_*.urdf
 .vscode/
 .idea/
 .DS_Store
+
+# Isaac URDF converter cache metadata (absolute local paths)
+robots/*/usd/*.usd/config.yaml
+robots/*/usd/*.usd/.asset_hash

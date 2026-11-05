@@ -1,0 +1,261 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "robotiq_arg85_description"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp60281psj/robotiq_arg85_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_robotiq_2f85_jqgazrbl/usdex_robotiq_2f85/robotiq_arg85_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_robotiq_2f85_jqgazrbl/temp_robotiq_2f85/robotiq_2f85.usd
+
+
+Generated from Composed Stage of root layer <repo>/robots/robotiq_2f85/usd/robotiq_2f85.usd/robotiq_2f85/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "robotiq_arg85_description"
+{
+    over "Physics"
+    {
+        def MjcActuator "finger_joint_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </robotiq_arg85_description/Physics/finger_joint>
+        }
+
+        def MjcActuator "left_inner_knuckle_joint_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </robotiq_arg85_description/Physics/left_inner_knuckle_joint>
+        }
+
+        def MjcActuator "left_inner_finger_joint_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </robotiq_arg85_description/Physics/left_inner_finger_joint>
+        }
+
+        def MjcActuator "right_inner_knuckle_joint_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </robotiq_arg85_description/Physics/right_inner_knuckle_joint>
+        }
+
+        def MjcActuator "right_inner_finger_joint_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </robotiq_arg85_description/Physics/right_inner_finger_joint>
+        }
+
+        def MjcActuator "right_outer_knuckle_joint_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </robotiq_arg85_description/Physics/right_outer_knuckle_joint>
+        }
+
+        over "finger_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "left_inner_knuckle_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "right_inner_knuckle_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "right_outer_knuckle_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "root_joint"
+        {
+        }
+
+        over "left_outer_finger_joint"
+        {
+        }
+
+        over "left_inner_finger_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "right_inner_finger_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "right_outer_finger_joint"
+        {
+        }
+    }
+
+    over "Geometry"
+    {
+        over "robotiq_85_base_link"
+        {
+            over "left_outer_knuckle"
+            {
+                over "left_outer_finger"
+                {
+                    over "outer_finger_fine"
+                    {
+                    }
+
+                    over "outer_finger_coarse"
+                    {
+                    }
+                }
+
+                over "outer_knuckle_fine"
+                {
+                }
+
+                over "outer_knuckle_coarse"
+                {
+                }
+            }
+
+            over "left_inner_knuckle"
+            {
+                over "left_inner_finger"
+                {
+                    over "inner_finger_fine"
+                    {
+                    }
+
+                    over "inner_finger_coarse"
+                    {
+                    }
+                }
+
+                over "inner_knuckle_fine"
+                {
+                }
+
+                over "inner_knuckle_coarse"
+                {
+                }
+            }
+
+            over "right_inner_knuckle"
+            {
+                over "right_inner_finger"
+                {
+                    over "inner_finger_fine"
+                    {
+                    }
+
+                    over "inner_finger_coarse"
+                    {
+                    }
+                }
+
+                over "inner_knuckle_fine"
+                {
+                }
+
+                over "inner_knuckle_coarse"
+                {
+                }
+            }
+
+            over "right_outer_knuckle"
+            {
+                over "right_outer_finger"
+                {
+                    over "outer_finger_fine"
+                    {
+                    }
+
+                    over "outer_finger_coarse"
+                    {
+                    }
+                }
+
+                over "outer_knuckle_fine"
+                {
+                }
+
+                over "outer_knuckle_coarse"
+                {
+                }
+            }
+
+            over "robotiq_85_base_link_fine"
+            {
+            }
+
+            over "robotiq_85_base_link_coarse"
+            {
+            }
+        }
+    }
+
+    over "Materials"
+    {
+    }
+
+    over "VisualMaterials"
+    {
+    }
+}
+

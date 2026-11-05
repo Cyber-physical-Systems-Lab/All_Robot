@@ -12,6 +12,7 @@
 #   isaac_builtin  use Isaac Lab's own config instead of our USD (e.g. Go2)
 #   mujoco_alt  well-tuned upstream MJCF you may prefer for serious work
 #   camera      screenshot framing shared by all simulators: view from +x+y, 25 deg above
+#   init_joints optional {joint-name regex: position} start pose (MuJoCo / Isaac screenshots)
 
 package: cps_robot_description
 
@@ -22,6 +23,7 @@ robots:
     urdf: robots/go2/urdf/go2.urdf
     fixed_base: false
     spawn_z: 0.45
+    init_joints: {'.*_hip_joint': 0.0, '.*_thigh_joint': 0.8, '.*_calf_joint': -1.5}  # standing pose
     mesh_search: [go2]
     defaults: {effort: 23.7, velocity: 30.1, link_mass: 0.1}
     usd: robots/go2/usd/go2.usd
@@ -81,7 +83,7 @@ robots:
 
   nova5:
     description: Dobot Nova 5 collaborative arm
-    camera: {distance: 2.2, target_z: 0.5}   # screenshot framing
+    camera: {distance: 1.8, target_z: 0.5}   # screenshot framing
     urdf: robots/nova5/urdf/nova5.urdf
     xacro: robots/nova5/xacro/nova5_robot.xacro
     fixed_base: true
@@ -94,7 +96,7 @@ robots:
 
   nova5_2f85:
     description: Dobot Nova 5 + Robotiq 2F-85 gripper
-    camera: {distance: 2.4, target_z: 0.55}   # screenshot framing
+    camera: {distance: 1.9, target_z: 0.55}   # screenshot framing
     urdf: robots/nova5_2f85/urdf/nova5_2f85.urdf
     fixed_base: true
     mesh_search: [nova5, robotiq_2f85]

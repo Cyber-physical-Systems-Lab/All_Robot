@@ -20,11 +20,13 @@ def _setup(context):
     gui = context.launch_configurations["gui"] == "true"
     rviz_cfg = context.launch_configurations["rviz_config"] or os.path.join(u.share(), "rviz", "urdf.rviz")
     xml = u.read_urdf(u.urdf_path(robot, variant))
+    zeros = u.init_joint_positions(xml, u.registry()[robot].get("init_joints"))
     return [
         Node(package="robot_state_publisher", executable="robot_state_publisher",
              parameters=[{"robot_description": xml}]),
         Node(package="joint_state_publisher_gui" if gui else "joint_state_publisher",
-             executable="joint_state_publisher_gui" if gui else "joint_state_publisher"),
+             executable="joint_state_publisher_gui" if gui else "joint_state_publisher",
+             parameters=[{"zeros": zeros}] if zeros else []),   # start pose (robots.yaml init_joints)
         Node(package="rviz2", executable="rviz2", output="screen",
              arguments=["-d", rviz_cfg, "-f", u.root_link(xml)]),
     ]

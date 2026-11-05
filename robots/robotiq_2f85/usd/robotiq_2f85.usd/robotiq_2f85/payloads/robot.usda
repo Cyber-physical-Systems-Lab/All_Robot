@@ -1,0 +1,139 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "robotiq_arg85_description"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp60281psj/robotiq_arg85_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_robotiq_2f85_jqgazrbl/usdex_robotiq_2f85/robotiq_arg85_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_robotiq_2f85_jqgazrbl/temp_robotiq_2f85/robotiq_2f85.usd
+
+
+Generated from Composed Stage of root layer <repo>/robots/robotiq_2f85/usd/robotiq_2f85.usd/robotiq_2f85/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "robotiq_arg85_description" (
+    prepend apiSchemas = ["IsaacRobotAPI"]
+)
+{
+    custom rel isaac:physics:robotJoints
+    custom rel isaac:physics:robotLinks
+
+    over "Geometry"
+    {
+        over "robotiq_85_base_link" (
+            prepend apiSchemas = ["IsaacLinkAPI"]
+        )
+        {
+            over "left_outer_knuckle" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "left_outer_finger" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "left_inner_knuckle" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "left_inner_finger" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "right_inner_knuckle" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "right_inner_finger" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "right_outer_knuckle" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "right_outer_finger" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        over "finger_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "left_inner_knuckle_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "right_inner_knuckle_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "right_outer_knuckle_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "root_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "left_outer_finger_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "left_inner_finger_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "right_inner_finger_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "right_outer_finger_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+    }
+}
+

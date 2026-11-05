@@ -64,7 +64,7 @@
     </camera>
   </library_cameras>
   <library_materials>
-    <material id="a0000000-0000-0000-0000-000000000000">
+    <material id="a0000000-0000-0000-0000-000000000000" name="gripper_base_material">
       <instance_effect url="#fx-a0000000-0000-0000-0000-000000000000" />
     </material>
   </library_materials>

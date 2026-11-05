@@ -1,0 +1,23 @@
+<mujoco model="myAGV">
+  <compiler angle="radian" />
+  <asset>
+    <mesh name="myagv_base" content_type="model/stl" file="../meshes/flat/myagv_base.stl" />
+    <mesh name="myagv_up" content_type="model/stl" file="../meshes/flat/myagv_up.stl" />
+  </asset>
+  <worldbody>
+    <body name="floating_base" pos="0 0 0.01">
+      <freejoint name="root" />
+      <inertial pos="0 0 0" mass="0.001" diaginertia="1e-6 1e-6 1e-6" />
+      <body name="base_footprint">
+        <inertial pos="0 0 0" mass="1.8" diaginertia="0.000648 0.000648 0.000648" />
+        <geom pos="0 0 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.7 0.7 0 1" density="0" mesh="myagv_base" />
+        <geom pos="0 0 0" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0 1" mesh="myagv_base" />
+        <body name="base_link">
+          <inertial pos="0 0 0" mass="1.8" diaginertia="0.000648 0.000648 0.000648" />
+          <geom pos="0 0 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.7 0.7 0 1" density="0" mesh="myagv_up" />
+          <geom pos="0 0 0" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0 1" mesh="myagv_up" />
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>

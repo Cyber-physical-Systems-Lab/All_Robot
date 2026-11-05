@@ -41,7 +41,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE.parent / "scripts"))
 from common import SCREENSHOT_DIR, camera_view, write_png  # noqa: E402
-from cps_robots_cfg import CPS_ROBOTS, REGISTRY, make_cfg  # noqa: E402
+from cps_robots_cfg import CPS_ROBOTS, REGISTRY, is_articulated, make_cfg  # noqa: E402
 
 SHOT_STEP, CHECK_STEPS = 300, 400
 
@@ -52,21 +52,32 @@ def run(name: str, short: bool) -> tuple[bool, str]:
     sim.set_camera_view(list(eye), list(target))
     sim_utils.GroundPlaneCfg().func("/World/ground", sim_utils.GroundPlaneCfg())
     sim_utils.DomeLightCfg(intensity=2500.0).func("/World/light", sim_utils.DomeLightCfg(intensity=2500.0))
-    robot = Articulation(make_cfg(name).replace(prim_path="/World/Robot"))
+    if is_articulated(name):
+        robot = Articulation(make_cfg(name).replace(prim_path="/World/Robot"))
+    else:  # no movable joints: plain USD prop, nothing to drive
+        spawn = make_cfg(name).spawn
+        spawn.func("/World/Robot", spawn, translation=(0.0, 0.0, float(REGISTRY[name].get("spawn_z", 0.0))))
+        robot = None
     camera = None
     if args.screenshot:
         camera = Camera(CameraCfg(
             prim_path="/World/ShotCam", update_period=0, height=args.height, width=args.width,
             data_types=["rgb"],
-            spawn=sim_utils.PinholeCameraCfg(focal_length=24.0, focus_distance=400.0,
-                                             horizontal_aperture=20.955, clipping_range=(0.01, 100.0))))
+            # 45 deg vertical FOV, like the MuJoCo / Gazebo / RViz screenshots
+            spawn=sim_utils.PinholeCameraCfg(
+                focal_length=24.0, focus_distance=400.0, clipping_range=(0.01, 100.0),
+                horizontal_aperture=2 * 24.0 * math.tan(math.radians(45.0) / 2) * args.width / args.height)))
     sim.reset()
     if camera is not None:
         dev = sim.device
         camera.set_world_poses_from_view(torch.tensor([eye], device=dev), torch.tensor([target], device=dev))
+    if robot is None:
+        return run_static(name, sim, camera)
     print(f"[{name}] joints ({robot.num_joints}): {robot.joint_names}")
     lo, hi = robot.data.soft_joint_pos_limits[0, :, 0], robot.data.soft_joint_pos_limits[0, :, 1]
-    mid, amp = (lo + hi) / 2, torch.clamp((hi - lo) / 4, max=0.5)
+    # hold the configured start pose (robots.yaml init_joints, else 0), wiggle around it
+    mid = torch.maximum(torch.minimum(robot.data.default_joint_pos[0], hi), lo)
+    amp = torch.clamp(torch.minimum(hi - mid, mid - lo), min=0.0, max=0.5)
     t, steps, shot = 0.0, 0, ""
     while app.is_running():
         # hold the mid pose while settling for the screenshot, then wiggle
@@ -96,6 +107,21 @@ def run(name: str, short: bool) -> tuple[bool, str]:
     if pos.abs().max() > 5.0:
         return False, f"root drifted to {pos.tolist()}" + shot
     return True, f"{robot.num_joints} joints, root z={pos[2]:.3f}" + shot
+
+
+def run_static(name: str, sim, camera) -> tuple[bool, str]:
+    """Step a joint-less robot so it renders; screenshot it like the articulated ones."""
+    shot = ""
+    for step in range(SHOT_STEP + 1):
+        sim.step()
+        if camera is not None:
+            camera.update(sim.get_physics_dt())
+            if step == SHOT_STEP:
+                out = SCREENSHOT_DIR / "isaac" / f"{name}.png"
+                write_png(out, camera.data.output["rgb"][0, ..., :3].cpu().numpy())
+                shot = f", screenshot {out.relative_to(HERE.parent)}"
+                print(f"[{name}] saved {out}")
+    return True, "static prop (no movable joints)" + shot
 
 
 short = args.check or args.screenshot
